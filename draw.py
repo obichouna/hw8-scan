@@ -3,8 +3,14 @@ from matrix import *
 from math import *
 from gmath import *
 
-def scanline_convert(polygons, i, screen, zbuffer ):
-    pass
+def scanline_convert(polygons, i, screen, zbuffer):
+    polygon = polygons[i : i + 3]
+    if (polygon[i][0] > polygon[i + 1][0]):
+        if (polygon[i][0] > polygon[i + 2][0]):
+            x_b = polygon[i][0]
+            y_b = polygon[i][1]
+            
+    
 
 def add_polygon( polygons, x0, y0, z0, x1, y1, z1, x2, y2, z2 ):
     add_point(polygons, x0, y0, z0);
